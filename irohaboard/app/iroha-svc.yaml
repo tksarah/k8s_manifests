@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: iroha-svc
+  namespace: irohaboard
+spec:
+  ports:
+  - port: 80
+    nodePort: 8000
+  selector:
+    app: webapp
+  type: NodePort 
